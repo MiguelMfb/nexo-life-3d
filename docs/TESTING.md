@@ -1,5 +1,7 @@
 # Validación
 
+Rediseño 0.2: build y lint correctos; 13 pruebas de motor y dos de navegador correctas (18,5 s E2E). Capturas de inicio desktop/móvil, barrio, interior y mapa móvil inspeccionadas. La prueba offline incluye las dos fuentes locales y sus licencias en la precarga (12 assets). Sin cambios al esquema v1. El arte aumenta dist a aproximadamente 3 MB; el aviso de tamaño del bundle principal sigue siendo un aviso de Vite.
+
 Resultado observado el 15 de octubre de 2026: compilación TypeScript/Vite correcta; 13 pruebas unitarias correctas (aprox. 1,3 s); dos E2E correctas (16 s) en Edge. Lint correcto, auditoría npm con cero vulnerabilidades. Bundle principal aproximadamente 2,56 MB sin comprimir / 691 KB gzip; Worker 75 KB; CSS 29 KB / 7 KB gzip; total dist menor a 3 MB. Vite informa un aviso de tamaño del bundle, no un fallo. No se certifica una tasa de FPS en hardware real; el HUD de Ajustes muestra las mediciones de cada sesión. Capturas desktop, interior y móvil inspeccionadas.
 
 `npm test`: determinismo, rechazo atómico, conservación de dinero, beca→matrícula→graduación→elegibilidad laboral, requisitos de alquiler/puestos, no duplicación al cambiar modo/cargar, exportación y continuidad, calendario y cumpleaños a diez años, archivos inválidos, deuda y pérdida de vivienda, promesas cumplidas/incumplidas, final de vida y bloqueo de acciones, vínculos persistentes y parentesco.

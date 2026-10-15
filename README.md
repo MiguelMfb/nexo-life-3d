@@ -1,4 +1,6 @@
-# NEXO LIFE 3D — edición inicial 0.1
+# NEXO LIFE 3D — edición inicial 0.2
+
+Rediseño Postal de barrio: paleta crema/tinta/mandarina, tipografías locales, navegación por colores y nuevos detalles urbanos. Referencias y sistema visual en docs/ART_DIRECTION.md. Compatible con partidas v1 de la edición anterior.
 
 Juego original de simulación de vida en español. Ciudad y vivienda 3D con PlayCanvas; React + TypeScript + Vite; simulación determinista en Web Worker; partidas locales en IndexedDB.
 

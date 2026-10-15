@@ -5,7 +5,7 @@ function rng(s:GameState){let x=s.rng|0;x^=x<<13;x^=x>>>17;x^=x<<5;s.rng=x>>>0;r
 function event(s:GameState,title:string,detail:string,category:LifeEvent['category'],reasons:string[],effects:string[]=[],parents:string[]=[]){const id=`e-${s.revision}-${s.tick}-${s.events.length}`;s.events.push({id,tick:s.tick,title,detail,category,reasons,effects,parents:parents.filter(Boolean)});return id;}
 function transfer(s:GameState,from:string,to:string,amount:number,category:string,eventId:string){if(!Number.isSafeInteger(amount)||amount<=0)throw Error('Monto inválido');s.accounts[from]-=amount;s.accounts[to]+=amount;s.ledger.push({id:`tx-${s.ledger.length}`,tick:s.tick,from,to,amount,category,eventId});}
 function expense(s:GameState,amount:number,category:string,id:string,credit=false){const cash=Math.min(s.accounts.player,amount);if(cash>0)transfer(s,'player','economy',cash,category,id);if(amount>cash&&credit){const debt=amount-cash;transfer(s,'bank','economy',debt,category,id);s.player.debt+=debt;}}
-export function createGame(seed='NEXO-2026',origin=0,name='Alex Rivera',outfit='#e3aa59',skin='#b98159'):GameState{
+export function createGame(seed='NEXO-2026',origin=0,name='Alex Rivera',outfit='#ff7146',skin='#b98159'):GameState{
  const o=origins[origin]??origins[0];let hash=2166136261;for(const c of seed)hash=Math.imul(hash^c.charCodeAt(0),16777619);
  const names=['Luz Salcedo','Mara Londoño','Nicolás Vega','Elena Duarte','Simón Ríos','Alma Pardo','Darío Sol','Irene Valle','Leo Montes','Clara Mar'];
  const s:GameState={schemaVersion:1,saveId:`nexo-${hash>>>0}-${origin}`,seed,rng:(hash>>>0)||1,tick:0,date:'2026-01-01T12:00:00.000Z',mode:'vida',origin,tutorial:0,revision:0,
@@ -106,3 +106,4 @@ export function validateSave(raw:unknown):GameState{
  if(s.scheduled.some(t=>t.npc&&!ids.includes(t.npc))||s.pending&&!stories.some(e=>e.id===s.pending))throw Error('Referencias inválidas');
  return s;
 }
+
