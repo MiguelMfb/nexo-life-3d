@@ -1,5 +1,7 @@
 # NEXO LIFE 3D — edición móvil 0.3
 
+Código completo para web y móvil en un solo repositorio: https://github.com/MiguelMfb/nexo-life-3d. Para editar desde otros equipos o Codex Cloud y configurar publicación automática, consulta [docs/GITHUB.md](docs/GITHUB.md). Las verificaciones de GitHub están preparadas; el despliegue automático requiere autorizar el secreto de Firebase.
+
 Interfaz móvil con joystick, gestos de cámara, botones grandes, zonas seguras y disposición horizontal. Perfil gráfico Ahorro automático en móviles; mismas partidas v1. Compatibilidad y pruebas de Safari/WebKit y Android en docs/MOBILE.md.
 
 Rediseño Postal de barrio: paleta crema/tinta/mandarina, tipografías locales, navegación por colores y nuevos detalles urbanos. Referencias y sistema visual en docs/ART_DIRECTION.md. Compatible con partidas v1 de la edición anterior.
