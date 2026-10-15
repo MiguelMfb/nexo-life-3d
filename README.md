@@ -1,6 +1,6 @@
 # NEXO LIFE 3D — edición móvil 0.3
 
-Código completo para web y móvil en un solo repositorio: https://github.com/MiguelMfb/nexo-life-3d. Para editar desde otros equipos o Codex Cloud y configurar publicación automática, consulta [docs/GITHUB.md](docs/GITHUB.md). Las verificaciones de GitHub están preparadas; el despliegue automático requiere autorizar el secreto de Firebase.
+Código completo para web y móvil en un solo repositorio: https://github.com/MiguelMfb/nexo-life-3d. Para editar desde otros equipos o Codex Cloud, consulta [docs/GITHUB.md](docs/GITHUB.md). GitHub ejecuta pruebas, lint y compilación; los cambios de `main` se publican automáticamente en Firebase cuando pasan las verificaciones.
 
 Interfaz móvil con joystick, gestos de cámara, botones grandes, zonas seguras y disposición horizontal. Perfil gráfico Ahorro automático en móviles; mismas partidas v1. Compatibilidad y pruebas de Safari/WebKit y Android en docs/MOBILE.md.
 

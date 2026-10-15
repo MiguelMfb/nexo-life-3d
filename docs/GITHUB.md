@@ -25,8 +25,10 @@ Guía oficial: https://learn.chatgpt.com/docs/cloud
 
 El workflow Project checks ejecuta pruebas de simulación, lint y compilación en pull requests y cambios de main. Las pruebas de navegador están incluidas en el repositorio y se ejecutan por separado según docs/TESTING.md y docs/MOBILE.md.
 
-Después de aprobar las verificaciones, los pushes a main publican en https://nexo-life-3d-mateo.web.app **sólo cuando se configure** el secreto de Actions `FIREBASE_SERVICE_ACCOUNT_NEXO_LIFE_3D_MATEO`. Mientras no exista, el workflow avisa y omite la publicación. Subir código a GitHub por sí solo todavía no actualiza Firebase.
+Después de aprobar las verificaciones, los pushes a main publican en https://nexo-life-3d-mateo.web.app. La credencial `FIREBASE_SERVICE_ACCOUNT_NEXO_LIFE_3D_MATEO` ya está configurada como secreto de GitHub Actions. La cuenta de servicio sólo pertenece al proyecto del juego. No necesitas iniciar sesión en Firebase en cada computador para publicar desde GitHub.
 
-La autorización de despliegue está pendiente. El secreto debe contener una credencial de cuenta de servicio autorizada para Hosting en `nexo-life-3d-mateo`; nunca debe añadirse al código ni enviarse por chat. Crear una clave persistente requiere aprobación del propietario. Firebase documenta el asistente `firebase init hosting:github`, que crea y cifra el secreto; si se usa, revisar los workflows generados para evitar duplicar despliegues y conservar pruebas antes de publicar.
+Flujo habitual: crea una rama, pide los cambios a Codex, guarda commits y haz push, abre un pull request y revisa las verificaciones. Integra en main para publicar. Desde la pestaña Actions también puedes ejecutar Project checks manualmente sobre main para volver a desplegar. Para recuperar una versión anterior, revierte el commit mediante un nuevo commit y súbelo a main.
+
+Nunca añadas la credencial al código ni la envíes por chat. Si se revoca o rota la clave, actualiza el secreto en Settings → Secrets and variables → Actions. Mientras falte el secreto, el workflow avisa y omite la publicación.
 
 Guía oficial: https://firebase.google.com/docs/hosting/github-integration
