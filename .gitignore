@@ -4,3 +4,9 @@ test-results/
 playwright-report/
 *.local
 *.tsbuildinfo
+.firebase/
+firebase-debug*.log
+.env
+.env.*
+!.env.example
+*service-account*.json

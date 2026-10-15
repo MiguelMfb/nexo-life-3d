@@ -1,6 +1,10 @@
-# NEXO LIFE 3D — edición inicial 0.2
+# NEXO LIFE 3D — edición móvil 0.3
+
+Interfaz móvil con joystick, gestos de cámara, botones grandes, zonas seguras y disposición horizontal. Perfil gráfico Ahorro automático en móviles; mismas partidas v1. Compatibilidad y pruebas de Safari/WebKit y Android en docs/MOBILE.md.
 
 Rediseño Postal de barrio: paleta crema/tinta/mandarina, tipografías locales, navegación por colores y nuevos detalles urbanos. Referencias y sistema visual en docs/ART_DIRECTION.md. Compatible con partidas v1 de la edición anterior.
+
+Juego publicado: https://nexo-life-3d-mateo.web.app. Configuración y próximos despliegues en docs/FIREBASE.md. Para llevar tu partida desde el enlace anterior, expórtala a JSON e impórtala en la nueva dirección.
 
 Juego original de simulación de vida en español. Ciudad y vivienda 3D con PlayCanvas; React + TypeScript + Vite; simulación determinista en Web Worker; partidas locales en IndexedDB.
 
