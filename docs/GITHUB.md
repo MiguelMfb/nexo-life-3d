@@ -32,3 +32,21 @@ Flujo habitual: crea una rama, pide los cambios a Codex, guarda commits y haz pu
 Nunca añadas la credencial al código ni la envíes por chat. Si se revoca o rota la clave, actualiza el secreto en Settings → Secrets and variables → Actions. Mientras falte el secreto, el workflow avisa y omite la publicación.
 
 Guía oficial: https://firebase.google.com/docs/hosting/github-integration
+
+## Estado verificado el 15 de octubre de 2026
+
+El secreto está configurado, pero GitHub bloqueó el arranque del runner con este mensaje: `The job was not started because your account is locked due to a billing issue.` Resuelve el estado de facturación en https://github.com/settings/billing y luego abre Actions → Project checks → Run workflow → main. Hasta resolverlo, la publicación automática no puede ejecutarse. El juego publicado sigue disponible.
+
+Para publicar manualmente desde otro equipo con acceso autorizado a Firebase:
+
+```sh
+npm ci
+npm test
+npm run lint
+npm run build
+npm install -g firebase-tools
+firebase login
+firebase deploy --only hosting --project nexo-life-3d-mateo
+```
+
+La sesión de Firebase de este computador no se transfiere a otros equipos. En Codex Cloud debes seleccionar el repositorio y crear/publicar su entorno desde tu cuenta; el repositorio incluye AGENTS.md para preparar el trabajo. No añadas la clave de despliegue a los archivos del entorno ni al repositorio.

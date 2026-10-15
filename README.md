@@ -2,6 +2,8 @@
 
 Código completo para web y móvil en un solo repositorio: https://github.com/MiguelMfb/nexo-life-3d. Para editar desde otros equipos o Codex Cloud, consulta [docs/GITHUB.md](docs/GITHUB.md). GitHub ejecuta pruebas, lint y compilación; los cambios de `main` se publican automáticamente en Firebase cuando pasan las verificaciones.
 
+Estado: integración y secreto configurados. GitHub Actions está bloqueado por un problema de facturación de la cuenta; hay que resolverlo para activar las ejecuciones. Instrucciones y alternativa manual en docs/GITHUB.md.
+
 Interfaz móvil con joystick, gestos de cámara, botones grandes, zonas seguras y disposición horizontal. Perfil gráfico Ahorro automático en móviles; mismas partidas v1. Compatibilidad y pruebas de Safari/WebKit y Android en docs/MOBILE.md.
 
 Rediseño Postal de barrio: paleta crema/tinta/mandarina, tipografías locales, navegación por colores y nuevos detalles urbanos. Referencias y sistema visual en docs/ART_DIRECTION.md. Compatible con partidas v1 de la edición anterior.
